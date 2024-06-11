@@ -7,7 +7,7 @@ pipeline {
     stages {
           stage('Checkout') {
             steps {
-                git "https://github.com/charytarak/jenkins-ECR.git"
+                git branch: 'main', credentialsId: '5025d40b-a1f0-4039-92ca-d08dac036ded', url: 'https://github.com/charytarak/jenkins-ECR.git'
             }
         }
            stage('Building image') {
